@@ -1,0 +1,13 @@
+def solution(A):
+    
+    mapper = {}
+    answer = 0
+
+    for num in A:
+
+        if mapper.get(num, 0) == 0:
+
+            mapper[num] = 1
+            answer += 1
+
+    return answer
