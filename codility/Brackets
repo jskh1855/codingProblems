@@ -1,0 +1,23 @@
+def solution(S):
+    
+    word_map = {'(':')', '{':'}', '[':']'}
+    s_list = list(S)
+    stack = []
+    answer = 1
+
+    while s_list:
+
+        char = s_list.pop()
+
+        if stack and word_map.get(char, 'dont have') != 'dont have' and word_map[char] == stack[-1]:
+
+            stack.pop()
+            continue
+
+        stack.append(char)
+
+    if stack:
+
+        answer = 0
+
+    return answer
