@@ -12,8 +12,8 @@ def solution(A):
     if len(peaks) < 3:
 
         return len(peaks)
-
-    flags = min(int(len(A)**(0.5))+1, len(peaks))
+    
+    flags = int((peaks[-1]-peaks[0])**(0.5))+1
 
     while flags > 2:
 
